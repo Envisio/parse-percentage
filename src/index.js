@@ -1,4 +1,3 @@
-import { sum, reduce, findLastIndex } from 'lodash';
 /**
  * @param {Array} arr
  * @param {Number} precision
@@ -10,12 +9,12 @@ import { sum, reduce, findLastIndex } from 'lodash';
  * console.log(newArr);
  */
 module.exports = (arr, precision = 2) => {
-  const total = sum(arr);
+  const total = arr.reduce((a, b) => a + b, 0);
   if (!total) {
     return arr;
   }
-  const lastIndex = findLastIndex(arr);
-  reduce(arr, (acc, item, index) => {
+  const lastIndex = arr.length - 1 - arr.reverse().findIndex(num => num > 0);
+  arr.reverse().reduce((acc, item, index) => {
     if (index === lastIndex) { // eslint-disable-next-line no-param-reassign
       arr[index] = parseFloat((1 - acc).toFixed(precision), 10);
     } else { // eslint-disable-next-line no-param-reassign

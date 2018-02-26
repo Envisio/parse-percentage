@@ -3,7 +3,6 @@ const { expect } = require('chai');
 const { describe, it } = require('mocha');
 
 const arr = [0.7, 0.15, 0.05, 0];
-
 describe('Array', () => {
   describe('.first', () => {
     it('should be 0.78', () => {
