@@ -1,0 +1,36 @@
+{
+  "name": "parse-percentage",
+  "version": "1.0.0",
+  "description": "Convert an array argument, percentify each value.",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "scripts": {
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha -report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "lint": "eslint ./src/index.js ./test/index.test.js --fix",
+    "build": "babel ./src -d lib --source-maps"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.1"
+  },
+  "homepage": "https://github.com/Envisio/parse-percentage",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Envisio/parse-percentage"
+  },
+  "bugs": {
+    "url": "https://github.com/Envisio/parse-percentage/issues",
+    "email": "bshao@envisio.com"
+  },
+  "author": "bshao@envisio.com"
+}
