@@ -13,7 +13,7 @@ module.exports = (arr, precision = 2) => {
   if (!total) {
     return arr;
   }
-  const lastIndex = arr.length - 1 - arr.reverse().findIndex(num => num > 0);
+  const lastIndex = arr.length - 1 - arr.reverse().findIndex((num) => num > 0);
   arr.reverse().reduce((acc, item, index) => {
     if (index === lastIndex) { // eslint-disable-next-line no-param-reassign
       arr[index] = parseFloat((1 - acc).toFixed(precision), 10);
