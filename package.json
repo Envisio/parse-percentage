@@ -1,6 +1,6 @@
 {
   "name": "parse-percentage",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Convert an array argument, percentify each value.",
   "main": "./lib/index.js",
   "license": "MIT",
