@@ -1,8 +1,0 @@
-{
-    "extends": "@istanbuljs/nyc-config-babel",
-    "all": true,
-    "includes": [
-        "test/*.test.js"
-    ],
-    "exclude": []
-}
