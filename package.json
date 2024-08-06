@@ -3,19 +3,23 @@
   "version": "1.0.5",
   "description": "Convert an array argument, percentify each value.",
   "main": "./lib/index.js",
+  "type": "module",
   "license": "MIT",
   "scripts": {
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha -report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha",
     "lint": "eslint ./src/index.js ./test/index.test.js --fix",
     "build": "babel ./src -d lib --source-maps"
   },
   "devDependencies": {
+    "@eslint/js": "^9.8.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "chai": "^4.1.2",
-    "coveralls": "^3.0.11",
-    "eslint-plugin-import": "^2.20.2",
-    "istanbul": "^0.4.5"
+    "chai": "^5.1.1",
+    "coveralls": "^3.1.1",
+    "eslint": "^9.8.0",
+    "globals": "^15.9.0",
+    "mocha": "^10.7.0",
+    "nyc": "^17.0.0"
   },
   "homepage": "https://github.com/Envisio/parse-percentage",
   "repository": {
@@ -26,10 +30,5 @@
     "url": "https://github.com/Envisio/parse-percentage/issues",
     "email": "bshao@envisio.com"
   },
-  "author": "bshao@envisio.com",
-  "dependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "mocha": "^10.2.0"
-  }
+  "author": "bshao@envisio.com"
 }
